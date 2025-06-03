@@ -16,7 +16,7 @@ Prerequisites
 
 **Google Cloud Setup**
 
-Create a Google Cloud Project:Google Cloud Console
+Create a Google Cloud Project: Google Cloud Console
 
 Enable Vertex AI API:Go to "APIs & Services" → "Enable APIs & Services" → Search Vertex AI API → Click "Enable".
 
