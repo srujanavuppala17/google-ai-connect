@@ -20,18 +20,26 @@ Create a Google Cloud Project:Google Cloud Console
 
 Enable Vertex AI API:Go to "APIs & Services" → "Enable APIs & Services" → Search Vertex AI API → Click "Enable".
 
-Create a Service Account & Download Key:
+Create a Service Account:
 
 Go to IAM & Admin → Service Accounts.
 
 Click "Create Service Account" → Assign "Vertex AI User" role.
 
-Go to "Keys" → Click "Add Key" → "Create New JSON Key".
+Generate an access token (expires after 1 hour) using the Google Cloud SDK:
 
-Download the JSON file and move it to src/main/resources/gemini-key.json.
-or
-Google Cloud SDK
+```bash
 gcloud auth application-default print-access-token
+```
+
+Open `src/main/resources/application.properties` and set the following properties:
+
+```properties
+google.cloud.project-id=<your-project-id>
+google.cloud.access-token=<token-above>
+```
+
+The previous step of placing a JSON key file is no longer required.
 
 **Install Java & Maven**
 
